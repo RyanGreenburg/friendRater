@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		620E506621FCD38B003C4675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E506521FCD38B003C4675 /* AppDelegate.swift */; };
-		620E506821FCD38B003C4675 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E506721FCD38B003C4675 /* ViewController.swift */; };
 		620E506B21FCD38B003C4675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620E506921FCD38B003C4675 /* Main.storyboard */; };
 		620E506D21FCD38B003C4675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620E506C21FCD38B003C4675 /* Assets.xcassets */; };
 		620E507021FCD38B003C4675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620E506E21FCD38B003C4675 /* LaunchScreen.storyboard */; };
+		620E507921FCD4C5003C4675 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E507821FCD4C5003C4675 /* Person.swift */; };
+		620E507D21FCE09D003C4675 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E507C21FCE09D003C4675 /* Relationship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		620E506221FCD38B003C4675 /* friendRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = friendRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		620E506521FCD38B003C4675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		620E506721FCD38B003C4675 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		620E506A21FCD38B003C4675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		620E506C21FCD38B003C4675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620E506F21FCD38B003C4675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		620E507121FCD38B003C4675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		620E507821FCD4C5003C4675 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		620E507C21FCE09D003C4675 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		620E506421FCD38B003C4675 /* friendRater */ = {
 			isa = PBXGroup;
 			children = (
+				620E507A21FCD798003C4675 /* Model */,
+				620E507B21FCD7A0003C4675 /* View */,
+				620E507721FCD399003C4675 /* Resources */,
+			);
+			path = friendRater;
+			sourceTree = "<group>";
+		};
+		620E507721FCD399003C4675 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				620E506521FCD38B003C4675 /* AppDelegate.swift */,
-				620E506721FCD38B003C4675 /* ViewController.swift */,
-				620E506921FCD38B003C4675 /* Main.storyboard */,
 				620E506C21FCD38B003C4675 /* Assets.xcassets */,
 				620E506E21FCD38B003C4675 /* LaunchScreen.storyboard */,
 				620E507121FCD38B003C4675 /* Info.plist */,
 			);
-			path = friendRater;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		620E507A21FCD798003C4675 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				620E507821FCD4C5003C4675 /* Person.swift */,
+				620E507C21FCE09D003C4675 /* Relationship.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		620E507B21FCD7A0003C4675 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				620E506921FCD38B003C4675 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				620E506821FCD38B003C4675 /* ViewController.swift in Sources */,
+				620E507921FCD4C5003C4675 /* Person.swift in Sources */,
+				620E507D21FCE09D003C4675 /* Relationship.swift in Sources */,
 				620E506621FCD38B003C4675 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +311,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = friendRater/Info.plist;
+				DEVELOPMENT_TEAM = H8C27D6HU3;
+				INFOPLIST_FILE = "$(SRCROOT)/friendRater/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +329,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = friendRater/Info.plist;
+				DEVELOPMENT_TEAM = H8C27D6HU3;
+				INFOPLIST_FILE = "$(SRCROOT)/friendRater/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
